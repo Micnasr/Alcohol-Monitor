@@ -12,10 +12,10 @@ const Form = props => {
     const submitHandler = event => {
         event.preventDefault();
         props.onAddItem({
+            name: drinkType,
             sex: sex,
-            weight: weight,
-            drinkType: drinkType,
-            drinkSize: drinkSize
+            size: drinkSize,
+            weight: weight
         });
     }
     
