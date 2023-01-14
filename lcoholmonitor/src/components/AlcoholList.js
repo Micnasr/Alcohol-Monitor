@@ -3,10 +3,10 @@ const AlcoholList = props => {
         <section className=''>
             <h2>All Drinks</h2>
             <ul>
-                {props.items.map(item => (
-                    <li key={item.id} onClick={props.onRemoveItem.bind(this,item.id)}>
-                        <span>{item.name}</span>
-                        <span>{item.size}</span>
+                {props.items.map(drink => (
+                    <li key={drink.id} onClick={props.onRemoveItem.bind(this,drink.id)}>
+                        <span>{drink.name}</span>
+                        <span>{drink.size}</span>
                     </li>
                 ))}
             </ul>
