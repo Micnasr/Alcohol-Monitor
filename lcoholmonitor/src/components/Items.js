@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Form from "./Form";
+import AlcoholList from "./AlcoholList";
 
 const Items = props => {
 
@@ -51,9 +52,20 @@ const Items = props => {
 
     }
 
+    const removeAlcoholHandler = itemID => {
+        fetch(`https://alcohol-monitor-8b753-default-rtdb.firebaseio.com/items/${itemID}.json`, {
+            method: 'DELETE',            
+        });
+
+        setItems(prevItems =>
+            prevItems.filter(item => item.id !== itemID)
+        );
+    }
+
     return (
         <>
            <Form onAddItem={addAlcoholHandler}/> 
+           <AlcoholList items={items} onRemoveItem={removeAlcoholHandler}/>
         </>
     )
 }
