@@ -1,8 +1,12 @@
 import './App.css';
+import Form from './components/Form'
 
 function App() {
   return (
-    <h>Hello Qasim</h>
+    <div>
+      <div>Alcohol Monitor</div>
+      <Form />
+    </div>
   );
 }
 
