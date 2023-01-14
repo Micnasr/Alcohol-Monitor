@@ -3,15 +3,20 @@ import { useState } from "react";
 
 const Form = props => {
     
-    const [sex, setSex] = useState("");
+    const [sex, setSex] = useState("male");
     const [weight, setWeight] = useState("");
     const [drinkType, setDrinkType] = useState("");
-    const [drinkSize, setDrinkSize] = useState("");
+    const [drinkSize, setDrinkSize] = useState("shot");
 
 
     const submitHandler = event => {
         event.preventDefault();
-        console.log(sex);
+        props.onAddItem({
+            sex: sex,
+            weight: weight,
+            drinkType: drinkType,
+            drinkSize: drinkSize
+        });
     }
     
     return (
