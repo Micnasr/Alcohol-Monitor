@@ -1,0 +1,23 @@
+[
+    {
+       "Drink":"Corona",
+       "Percentage":"4.6"
+    },
+    {
+        "Drink": "Bud Light",
+        "Percentage": "4.2" 
+    },
+    {
+        "Drink": "Budweiser",
+        "Percentage": "5.0"
+    },
+    {
+        "Drink": "Smirnoff Ice",
+        "Percentage": "5.0"
+    },
+    {
+        "Drink": "Smirnoff Red Label",
+        "Percentage": "40.0"
+    }
+
+ ]
