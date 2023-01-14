@@ -1,9 +1,15 @@
+import { useState } from "react";
+
 import Form from "./Form";
 
 const Items = props => {
 
+    const [items, setItems] = useState([]);
+
     const addAlcoholHandler = item => {
-        console.log(item);
+        setItems(prevItems => [...prevItems, {...item}]);
+        console.log(items);
+
     }
 
     return (
