@@ -106,7 +106,7 @@ const Items = props => {
     return (
         <>
            <Form onAddItem={addAlcoholHandler} bac={result}/> 
-           <AlcoholList items={items} onRemoveItem={removeAlcoholHandler}/>
+           <AlcoholList items={items} onRemoveItem={removeAlcoholHandler} bac={result}/>
         </>
     )
 }
