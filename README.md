@@ -33,7 +33,7 @@ For the Google technology we decided to integrate the Firebase Realtime Database
 </p>
 
 ## Problems we ran into 😰
-* Incorperating time into elapsed time calculations
+* Incorporating time into elapsed time calculations
 * UseState hooks constantly delayed
 * Reading data from database
 
