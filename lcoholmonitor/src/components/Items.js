@@ -73,7 +73,10 @@ const Items = props => {
         let r_value = 0.55;
         let BAL = 0;
     
-        
+        if (items.sex === "male"){
+            r_value = 0.68;
+          }
+
         /*
         * Parameter weight is pulled from user input
         * Parameter volume is searched from json file
