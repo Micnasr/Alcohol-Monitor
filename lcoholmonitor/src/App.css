@@ -1,3 +1,44 @@
 .App {
   text-align: center;
 }
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+.navbar-icon{
+  width: 50%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+#first-nav{
+  padding:0!important;
+}
