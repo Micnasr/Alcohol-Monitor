@@ -1,16 +1,24 @@
+import './AlcoholList.css';
+
+
 const AlcoholList = props => {
     return(
-        <section className=''>
-            <h2>All Drinks</h2>
-            <ul>
-                {props.items.map(drink => (
-                    <li key={drink.id} onClick={props.onRemoveItem.bind(this,drink.id)}>
-                        <span>{drink.name}</span>
-                        <span>{drink.size}</span>
-                    </li>
-                ))}
-            </ul>
-        </section>    )
+        <div className="grid-container">
+            <div className="grid-item">
+            <section className=''>
+                <h2 className="drinks-title">All Drinks</h2>
+                <ul>
+                    {props.items.map(drink => (
+                        <div className = "drinkCard" key={drink.id} onClick={props.onRemoveItem.bind(this,drink.id)}>
+                            <span>{drink.name}</span>
+                            <span>{drink.size}</span>
+                        </div>
+                    ))}
+                </ul>
+            </section>
+        </div>
+        </div>
+        )
 }
 
 export default AlcoholList;
