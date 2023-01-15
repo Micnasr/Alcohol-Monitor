@@ -14,7 +14,7 @@ const AlcoholList = props => {
                         {props.items.map(drink => (
                             <div className = "drinkCard" key={drink.id} onClick={props.onRemoveItem.bind(this,drink.id)}>
                                 <span>{drink.name.split(" ")[0]} </span>
-                                <span>{drink.size}</span>
+                                <span>{"("+drink.size+")"}</span>
                             </div>
                         ))}
                     </ul>

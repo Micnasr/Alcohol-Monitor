@@ -55,7 +55,6 @@ const Form = props => {
                         <option value="shot">Shot</option>
                         <option value="wine">Wine Glass</option>
                         <option value="beer">Beer Cup</option>
-                        <option value="other">Product Size</option>
                         </select>
                         </div>
 
