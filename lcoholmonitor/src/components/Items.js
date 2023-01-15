@@ -72,12 +72,6 @@ const Items = props => {
         let r_value = 0.55;
         let BAL = 0;
 
-        /*
-        * Parameter weight is pulled from user input
-        * Parameter volume is searched from json file
-        * Parameter alc_perc is searched from json file
-        */
-
         let timeNow = new Date().getTime();
     
         let volume = 0;
