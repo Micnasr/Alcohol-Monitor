@@ -32,3 +32,13 @@ For the Google technology we decided to integrate the Firebase Realtime Database
 <img width="50%" src="https://user-images.githubusercontent.com/73625971/212540475-93fe744b-fa3d-4c48-81b5-845961fa9e83.png">
 </p>
 
+## Problems we ran into 😰
+* Incorperating time into elapsed time calculations
+* UseState hooks constantly delayed
+* Reading data from database
+
+## Future improvments 🪄
+* Photo scan of drink
+* More comprehensive alcohol database
+* More secure database implementation 
+* User logins
