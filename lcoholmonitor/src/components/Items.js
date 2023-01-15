@@ -96,7 +96,7 @@ const Items = props => {
             } else {
                 volume = other;
             }
-            grams_alcohol = volume * (parseFloat(items[i].name.split(" ")[1])/100) * density_alc;
+            grams_alcohol = volume * (parseFloat(items[i].name.split("-")[1])/100) * density_alc;
             BAL += Math.round((((grams_alcohol / (parseFloat(items[0].weight) * 1000 * r_value)) * 100) + Number.EPSILON) * 10000) / 10000;            
         }
 

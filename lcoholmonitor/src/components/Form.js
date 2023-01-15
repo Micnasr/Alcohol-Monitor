@@ -6,7 +6,7 @@ const Form = props => {
     
     const [sex, setSex] = useState("male");
     const [weight, setWeight] = useState(60);
-    const [drinkType, setDrinkType] = useState("Corona 4.6");
+    const [drinkType, setDrinkType] = useState("Corona-4.6");
     const [drinkSize, setDrinkSize] = useState("shot");
 
 
@@ -43,10 +43,10 @@ const Form = props => {
 
                         <div className="input-container">
                         <select className = "input-title" value={drinkType} onChange={event => setDrinkType(event.target.value)}>
-                        <option value="Corona 4.6">Corona</option>
-                        <option value="Budweiser 5">Budweiser</option>
-                        <option value="BudLight 4.2">BudLight</option>
-                        <option value="Bacardi 40">Bacardi</option>
+                        <option value="Corona-4.6">Corona</option>
+                        <option value="Budweiser-5">Budweiser</option>
+                        <option value="Bud Light-4.2">Bud Light</option>
+                        <option value="Bacardi-40">Bacardi</option>
                         </select>
                         </div>
 
