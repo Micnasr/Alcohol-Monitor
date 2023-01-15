@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Form from "./Form";
 import AlcoholList from "./AlcoholList";
+import Calculate from "./Calculate";
 
 const Items = props => {
 
@@ -66,6 +67,7 @@ const Items = props => {
         <>
            <Form onAddItem={addAlcoholHandler}/> 
            <AlcoholList items={items} onRemoveItem={removeAlcoholHandler}/>
+           <Calculate items = {items}/>
         </>
     )
 }
