@@ -4,8 +4,8 @@ import './Form.css';
 const Form = props => {
     
     const [sex, setSex] = useState("male");
-    const [weight, setWeight] = useState("");
-    const [drinkType, setDrinkType] = useState("");
+    const [weight, setWeight] = useState();
+    const [drinkType, setDrinkType] = useState("4.6");
     const [drinkSize, setDrinkSize] = useState("shot");
 
 
@@ -31,11 +31,16 @@ const Form = props => {
                             </select>
                         </div>
                         <div className="input-container">
-                            <input className = "input-title" type="number" id="amount" placeholder="Amount (Kg)" value={weight} onChange={event => setWeight(event.target.value)} />
+                            <input className = "input-title" type="number" min="1" max="200" id="amount" placeholder="Amount (Kg)" value={weight} onChange={event => setWeight(event.target.value)} />
                         </div>
 
                         <div className="input-container">
-                        <input className = "input-title" type="text" id="amount" placeholder="Drink Type" value={drinkType} onChange={event => setDrinkType(event.target.value)} />
+                        <select className = "input-title" value={drinkType} onChange={event => setDrinkType(event.target.value)}>
+                        <option value="4.6">Corona</option>
+                        <option value="5">Budweiser</option>
+                        <option value="4.2">Bud Light</option>
+                        <option value="40">Bacardi</option>
+                        </select>
                         </div>
 
                         <div className="input-container">
