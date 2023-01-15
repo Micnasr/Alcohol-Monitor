@@ -7,6 +7,20 @@
     font-family: 'Francois One', sans-serif;
   }
 
+  .grid-container{
+    display: flex;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    column-gap: 2%;
+}
+
+.grid-item{
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    border-radius: 5px;
+}
+
   .input-container{
     text-align: center;
     margin: 10px;
@@ -47,3 +61,4 @@ input,select{
 .input-title{
     font-size: 20px;
 }
+

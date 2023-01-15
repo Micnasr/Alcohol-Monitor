@@ -55,7 +55,8 @@ const Form = props => {
                 </section>
             </div>
 
-            <div className="grid-item"> GRID #2
+            <div className="grid-item">
+                
             </div>
 
 
