@@ -22,6 +22,7 @@ With the above parameters we used the Widmark formula described in the following
 
 * ```BAC=(Alcohol consumed in grams / (Body weight in grams * r)) * 100```
 * ``` Alcohol consumed (g) = Volume consumed (mL) * Alcohol (%) * Density of Alcohol (0.789 g/cm^3)```
+* BAC in terms of time: ```BAC = BAC - (BAC * hours * 0.015)```
 
 
 ## Database 💾 
