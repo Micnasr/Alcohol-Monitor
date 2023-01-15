@@ -72,6 +72,7 @@ const Form = props => {
                 textColor="#000000"
                 arcsLength={[0.5, 0.35, 0.25]}
                 percent={bac/0.1} 
+                animateDuration	 = {1000}
                 />
             </div>
 
