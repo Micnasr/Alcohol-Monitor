@@ -20,8 +20,8 @@ This project was designed during Deltahacks IX and was submitted to the *Google 
 
 With the above parameters we used the Widmark formula described in the following [paper](https://www.yasa.org/upload/uploadedfiles/alcohol.pdf). The Widmark is a rough estimate of the blood alcohol concentration and shouldn't be taken as a definitive number. The Widmark formula is:
 
-```BAC=(Alcohol consumed in grams / (Body weight in grams * r)) * 100```
-``` Alcohol consumed (g) = Volume consumed (mL) * Alcohol (%) * Density of Alcohol (0.789 g/cm^3)```
+* ```BAC=(Alcohol consumed in grams / (Body weight in grams * r)) * 100```
+* ``` Alcohol consumed (g) = Volume consumed (mL) * Alcohol (%) * Density of Alcohol (0.789 g/cm^3)```
 
 
 ## Database 💾 
