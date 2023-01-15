@@ -51,3 +51,11 @@ ul {
    text-align: center;
    transform: translateY(-50%); 
 }
+
+
+#time-since{
+   float:right;
+}
+
+
+
