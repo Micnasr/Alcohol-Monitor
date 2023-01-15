@@ -72,10 +72,6 @@ const Items = props => {
         const density_alc = 0.789;
         let r_value = 0.55;
         let BAL = 0;
-    
-        if (items.sex === "male"){
-            r_value = 0.68;
-          }
 
         /*
         * Parameter weight is pulled from user input
@@ -86,6 +82,11 @@ const Items = props => {
        let volume = 0;
 
         for (let i = 0; i < items.length; i++){
+            if (items[0].sex === "male"){
+                r_value = 0.68;
+              }
+
+            
             if(items[i].size === "shot"){
                 volume = shot;
             } else if (items[i].size === "wine"){
