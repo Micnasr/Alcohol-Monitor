@@ -7,6 +7,7 @@ const AlcoholList = props => {
 
     let message = "Loading...";
 
+    //Print Specific Message Depending on Blood Alcohol Concentration
     if (props.bac >= 0.08) {
         message = "🛑 Don't Even Think About It 🛑";
     } else if (props.bac < 0.08 && props.bac >= 0.05) {

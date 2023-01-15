@@ -4,15 +4,19 @@ import GaugeChart from 'react-gauge-chart'
 
 const Form = props => {
     
+    //Store user's sex
     const [sex, setSex] = useState("male");
+    //Store user's weight in kgs
     const [weight, setWeight] = useState(60);
+    //Store the drink type
     const [drinkType, setDrinkType] = useState("Corona-4.6");
+    //Store the drink size
     const [drinkSize, setDrinkSize] = useState("shot");
 
     const [currentTime, setCurrentTime] = useState(new Date().getTime());
     const [timeDiff, setTimeDiff] = useState(0);
 
-
+    //Function responsible in sending the form data to the parent components
     const submitHandler = event => {
         event.preventDefault();
         setCurrentTime(new Date().getTime());
@@ -26,8 +30,8 @@ const Form = props => {
         });
     }
 
+    //Restrict the bac to go above 100% limit
     let bac = props.bac;
-
     if (bac > 0.1){
         bac = 0.1;
     }
