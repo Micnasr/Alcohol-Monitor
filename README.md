@@ -45,6 +45,8 @@ For the Google technology we decided to integrate the Firebase Realtime Database
 * Mobile implementation 
 * BOOTSTRAP!
 
+<br></br>
+
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/73625971/212541016-57745cb8-6327-4ce1-ab1c-8b3e26bb5143.png">
 
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/73625971/212541037-be1ac672-7bea-4096-83f2-21b1c3fd316d.png">
