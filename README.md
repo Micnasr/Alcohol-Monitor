@@ -14,7 +14,7 @@
 * CSS
 
 ## About
-This project was designed during Deltahacks IX and was submitted to the *Google Developer Student Club Challenge* category. The primary goal of this category was to build a project that solves one of the United Nations' 17 Sustainable Development Goals using [Google Technology](https://developers.google.com/products). We chose the goal of creating a web application that promotes good health & well being. 
+This project was designed during [Deltahacks IX](https://deltahacks.com/)_ and was submitted to the *Google Developer Student Club Challenge* category. The primary goal of this category was to build a project that solves one of the United Nations' 17 Sustainable Development Goals using [Google Technology](https://developers.google.com/products). We chose the goal of creating a web application that promotes good health & well being. 
 
 This program calculates the users blood alcohol concentration using a few input parameters to determine whether it would be safe for the user to drive their vehicle (Using Ontario's recommended blood alcohol concentraition 0.08). The program uses the users weight, sex, alcohol consumed (grams) (shots [1.5oz], wine glass [5oz], beer cup [12oz]), alcoholic beverage. The alcoholic beverage is a local database constructed using some of the most popoular drinks.
 
