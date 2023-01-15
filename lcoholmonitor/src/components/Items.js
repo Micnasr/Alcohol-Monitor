@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 
 import Form from "./Form";
 import AlcoholList from "./AlcoholList";
-import Calculate from "./Calculate";
 
 const Items = props => {
 
     const [items, setItems] = useState([]);
+    const [result, setResult] = useState(0);
 
     useEffect(() => {
         fetch('https://alcohol-monitor-8b753-default-rtdb.firebaseio.com/items.json').then(
@@ -62,12 +62,51 @@ const Items = props => {
             prevItems.filter(item => item.id !== itemID)
         );
     }
+    
+    useEffect(() => {
+        let grams_alcohol = 0;
+        const shot = 44.4;
+        const wine = 147.9;
+        const beer = 354.9;
+        const other = 305.0;
+        const density_alc = 0.789;
+        let r_value = 0.55;
+        let BAL = 0;
+    
+        
+        /*
+        * Parameter weight is pulled from user input
+        * Parameter volume is searched from json file
+        * Parameter alc_perc is searched from json file
+        */
+    
+       let volume = 0;
+
+        for (let i = 0; i < items.length; i++){
+            if(items[i].size === "shot"){
+                volume = shot;
+            } else if (items[i].size === "wine"){
+                volume = wine;
+            } else if (items[i].size === "beer"){
+                volume = beer;
+            } else {
+                volume = other;
+            }
+
+            grams_alcohol = volume * (parseFloat(items[i].name)/100) * density_alc;
+            BAL += Math.round((((grams_alcohol / (parseFloat(items[0].weight) * 1000 * r_value)) * 100) + Number.EPSILON) * 10000) / 10000;
+            console.log(BAL);
+            
+        }
+
+        setResult(BAL);
+    
+    }, [items]); 
 
     return (
         <>
-           <Form onAddItem={addAlcoholHandler}/> 
+           <Form onAddItem={addAlcoholHandler} bac={result}/> 
            <AlcoholList items={items} onRemoveItem={removeAlcoholHandler}/>
-           <Calculate items = {items}/>
         </>
     )
 }

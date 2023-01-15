@@ -5,7 +5,7 @@ import GaugeChart from 'react-gauge-chart'
 const Form = props => {
     
     const [sex, setSex] = useState("male");
-    const [weight, setWeight] = useState();
+    const [weight, setWeight] = useState(60);
     const [drinkType, setDrinkType] = useState("4.6");
     const [drinkSize, setDrinkSize] = useState("shot");
 
@@ -18,6 +18,12 @@ const Form = props => {
             size: drinkSize,
             weight: weight
         });
+    }
+
+    let bac = props.bac;
+
+    if (bac > 0.1){
+        bac = 0.1;
     }
     
     return (
@@ -65,7 +71,7 @@ const Form = props => {
                 <GaugeChart id="gauge-chart1"
                 textColor="#000000"
                 arcsLength={[0.5, 0.35, 0.25]}
-                percent={0.09/0.1} 
+                percent={bac/0.1} 
                 />
             </div>
 
