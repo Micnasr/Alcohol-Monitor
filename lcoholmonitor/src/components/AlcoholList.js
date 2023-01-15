@@ -3,7 +3,7 @@ import './AlcoholList.css';
 
 const AlcoholList = props => {
 
-    
+    let timeNow = new Date().getTime();
 
     return(
         <div className="grid-container">
@@ -14,7 +14,8 @@ const AlcoholList = props => {
                         {props.items.map(drink => (
                             <div className = "drinkCard" key={drink.id} onClick={props.onRemoveItem.bind(this,drink.id)}>
                                 <span>{drink.name.split("-")[0]} </span>
-                                <span>{"("+drink.size+")"}</span>
+                                <span>{"(Size: "+drink.size+")"}</span>
+                                <p class="time-since">{"⏳"+Math.round((parseInt(timeNow)/3600000 - (parseInt(drink.time)/3600000 - parseFloat(drink.diff))) * 100) / 100 + " hours ago"}</p>
                             </div>
                         ))}
                     </ul>

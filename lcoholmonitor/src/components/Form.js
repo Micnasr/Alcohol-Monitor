@@ -59,8 +59,8 @@ const Form = props => {
                         <div className="input-container">
                         <select className = "input-title" value={drinkSize} onChange={event => setDrinkSize(event.target.value)}>
                         <option value="shot">Shot</option>
-                        <option value="wine">Wine Glass</option>
-                        <option value="beer">Beer Cup</option>
+                        <option value="wine glass">Wine Glass</option>
+                        <option value="beer cup">Beer Cup</option>
                         </select>
                         </div>
 

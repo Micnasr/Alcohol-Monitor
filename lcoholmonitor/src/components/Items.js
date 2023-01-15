@@ -91,9 +91,9 @@ const Items = props => {
             
             if(items[i].size === "shot"){
                 volume = shot;
-            } else if (items[i].size === "wine"){
+            } else if (items[i].size === "wine glass"){
                 volume = wine;
-            } else if (items[i].size === "beer"){
+            } else if (items[i].size === "beer cup"){
                 volume = beer;
             } else {
                 volume = other;
