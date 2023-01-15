@@ -12,8 +12,6 @@
     grid-template-columns: auto auto;
     padding: 10px;
     column-gap: 2%;
-    align-items: center;
-
 }
 
 .grid-item{    
