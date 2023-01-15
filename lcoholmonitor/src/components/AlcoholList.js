@@ -24,17 +24,17 @@ const AlcoholList = props => {
                     <ul>
                         {props.items.map(drink => (
                             <div className = "drinkCard" key={drink.id} onClick={props.onRemoveItem.bind(this,drink.id)}>
-                                <span class = "alc-list">{drink.name.split("-")[0]} </span>
-                                <span class = "alc-list">{"(Size: "+drink.size+")"}</span>
-                                <span class = "alc-list" id = "time-since">{"⏳"+Math.round((parseInt(timeNow)/3600000 - (parseInt(drink.time)/3600000 - parseFloat(drink.diff))) * 100) / 100 + " hours ago"}</span>
+                                <span className = "alc-list">{drink.name.split("-")[0]} </span>
+                                <span className = "alc-list">{"(Size: "+drink.size+")"}</span>
+                                <span className = "alc-list" id = "time-since">{"⏳"+Math.round((parseInt(timeNow)/3600000 - (parseInt(drink.time)/3600000 - parseFloat(drink.diff))) * 100) / 100 + " hours ago"}</span>
                             </div>
                         ))}
                     </ul>
                 </section>
             </div>
             <div className="grid-item" id="grid-4">
-                <h1 class="decision">Can I drive? </h1>
-                <h1 class="decision">{message}</h1>
+                <h1 className="decision">Can I drive? </h1>
+                <h1 className="decision">{message}</h1>
             </div>
         </div>
         )

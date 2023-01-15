@@ -2,6 +2,10 @@ import './App.css';
 import Items from './components/Items'
 
 function App() {
+
+  //changes the tab name of the website
+  document.title = 'Alcohol Monitor';
+
   return (
     <>
     <div>
