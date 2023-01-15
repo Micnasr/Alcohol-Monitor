@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './Form.css';
 import GaugeChart from 'react-gauge-chart'
 
@@ -9,14 +9,20 @@ const Form = props => {
     const [drinkType, setDrinkType] = useState("Corona-4.6");
     const [drinkSize, setDrinkSize] = useState("shot");
 
+    const [currentTime, setCurrentTime] = useState(new Date().getTime());
+    const [timeDiff, setTimeDiff] = useState(0);
+
 
     const submitHandler = event => {
         event.preventDefault();
+        setCurrentTime(new Date().getTime());
         props.onAddItem({
             name: drinkType,
             sex: sex,
             size: drinkSize,
-            weight: weight
+            weight: weight,
+            time: currentTime,
+            diff: timeDiff
         });
     }
 
@@ -55,6 +61,17 @@ const Form = props => {
                         <option value="shot">Shot</option>
                         <option value="wine">Wine Glass</option>
                         <option value="beer">Beer Cup</option>
+                        </select>
+                        </div>
+
+                        <div className="input-container">
+                        <select className = "input-title" value={timeDiff} onChange={event => setTimeDiff(event.target.value)}>
+                        <option value={0}>Now</option>
+                        <option value={0.25}>15 min ago</option>
+                        <option value={0.5}>30 min ago</option>
+                        <option value={1}>1 hour ago</option>
+                        <option value={2}>2 hours ago</option>
+                        <option value={3}>3 hours ago</option>
                         </select>
                         </div>
 

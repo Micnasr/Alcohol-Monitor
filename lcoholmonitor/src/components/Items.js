@@ -22,7 +22,9 @@ const Items = props => {
                 name: responseData[key].name,
                 sex: responseData[key].sex,
                 size: responseData[key].size,
-                weight: responseData[key].weight
+                weight: responseData[key].weight,
+                time: responseData[key].time,
+                diff: responseData[key].diff
             });
         }
         
@@ -49,8 +51,6 @@ const Items = props => {
             setItems(prevItems => [...prevItems, {id: responseData.name, ...item}]);
         });    
         
-        console.log(items);
-
     }
 
     const removeAlcoholHandler = itemID => {
@@ -78,8 +78,10 @@ const Items = props => {
         * Parameter volume is searched from json file
         * Parameter alc_perc is searched from json file
         */
+
+        let timeNow = new Date().getTime();
     
-       let volume = 0;
+        let volume = 0;
 
         for (let i = 0; i < items.length; i++){
             if (items[0].sex === "male"){
@@ -96,8 +98,14 @@ const Items = props => {
             } else {
                 volume = other;
             }
+
+            let differenceInMilliseconds = parseInt(timeNow) - (parseInt(items[i].time) - parseFloat(items[i].diff)*3600000);
+            let differenceInHours = (differenceInMilliseconds / 3600000);
+            let hours = (differenceInHours);
+
             grams_alcohol = volume * (parseFloat(items[i].name.split("-")[1])/100) * density_alc;
             BAL += Math.round((((grams_alcohol / (parseFloat(items[0].weight) * 1000 * r_value)) * 100) + Number.EPSILON) * 10000) / 10000;            
+            BAL = BAL - (BAL * 0.015 * hours);
         }
 
         setResult(BAL);
