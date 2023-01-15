@@ -26,6 +26,9 @@ With the above parameters we used the Widmark formula described in the following
 
 
 ## Database 💾 
-For the google technology we decided to integrate the Firebase Realtime Database. We store all of drinks on there so that whenever we reload the page or access the website on a different account, we can continue from where we left off. Your alcohol blood concentration also depends on how much time has passed since you drank the drink so we are able to store the time and update it continuously to show more accurate results.
+For the Google technology we decided to integrate the Firebase Realtime Database. We store all of drinks on there so that whenever we reload the page or access the website on a different devices, we can continue from where we left off. Your alcohol blood concentration also depends on how much time has passed since you drank the drink so we are able to store the time and update it continuously to show more accurate results.
 
+<p align="center">
+<img width="50%" src="https://user-images.githubusercontent.com/73625971/212540475-93fe744b-fa3d-4c48-81b5-845961fa9e83.png">
+</p>
 
