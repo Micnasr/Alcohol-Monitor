@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Form.css';
+import GaugeChart from 'react-gauge-chart'
 
 const Form = props => {
     
@@ -61,8 +62,14 @@ const Form = props => {
             </div>
 
             <div className="grid-item">
-                
+                <GaugeChart id="gauge-chart1"
+                textColor="#000000"
+                arcsLength={[0.5, 0.35, 0.25]}
+                percent={0.09/0.1} 
+                />
             </div>
+
+            
 
 
         </div>
