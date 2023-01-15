@@ -44,3 +44,10 @@ ul {
  .drinkCard:hover{
     transform: translateY(-2px);
  }
+
+ .decision{
+   position: relative;
+   top: 50%;
+   text-align: center;
+   transform: translateY(-50%); 
+}
