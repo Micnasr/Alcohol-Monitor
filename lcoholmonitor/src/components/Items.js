@@ -68,7 +68,6 @@ const Items = props => {
         const shot = 44.4;
         const wine = 147.9;
         const beer = 354.9;
-        const other = 305.0;
         const density_alc = 0.789;
         let r_value = 0.55;
         let BAL = 0;
@@ -95,9 +94,7 @@ const Items = props => {
                 volume = wine;
             } else if (items[i].size === "beer cup"){
                 volume = beer;
-            } else {
-                volume = other;
-            }
+            } 
 
             let differenceInMilliseconds = parseInt(timeNow) - (parseInt(items[i].time) - parseFloat(items[i].diff)*3600000);
             let differenceInHours = (differenceInMilliseconds / 3600000);

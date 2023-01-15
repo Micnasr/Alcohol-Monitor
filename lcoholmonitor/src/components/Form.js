@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import './Form.css';
 import GaugeChart from 'react-gauge-chart'
 
