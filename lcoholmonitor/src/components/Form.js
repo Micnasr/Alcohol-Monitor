@@ -45,7 +45,7 @@ const Form = props => {
                         <select className = "input-title" value={drinkType} onChange={event => setDrinkType(event.target.value)}>
                         <option value="Corona 4.6">Corona</option>
                         <option value="Budweiser 5">Budweiser</option>
-                        <option value="Bud Light 4.2">Bud Light</option>
+                        <option value="BudLight 4.2">BudLight</option>
                         <option value="Bacardi 40">Bacardi</option>
                         </select>
                         </div>
