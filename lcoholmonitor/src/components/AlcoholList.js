@@ -8,11 +8,11 @@ const AlcoholList = props => {
     let message = "Loading...";
 
     if (props.bac >= 0.08) {
-        message = "Don't Even Think About It";
+        message = "🛑 Don't Even Think About It 🛑";
     } else if (props.bac < 0.08 && props.bac >= 0.05) {
-        message = "Not Recommended to Drive";
+        message = "🟡 Not Recommended to Drive 🟡";
     } else {
-        message = "Safe to Drive";
+        message = "🟢 Safe to Drive 🟢";
     }
 
     return(
